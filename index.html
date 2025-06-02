@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ankit</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="port.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <div class="header">
+      <div class="container">
+        <nav>
+          <img class="logo" src="image/logo.png" />
+
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Service</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+            <i class="fas-solid fa-circle-xmark"></i>
+          </ul>
+          <i class="fa-solid fa-bars"></i>
+        </nav>
+        <div class="header-text">
+          <p>MTS in Archeology</p>
+          <h1>
+            Hi. i'm <span>Ankit</span><br />
+            from India.
+          </h1>
+        </div>
+      </div>
+    </div>
+    <!------------about----------->
+    <div class="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-cal-1">
+            <img class="about1" src="image/aboutpic.jpg" />
+            <img class="about2" src="image/aboutpic2.jpg" />
+          </div>
+          <div class="about-cal-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>
+              I am Ankit Meena from Sawai Madhopur, Rajasthan, currently working
+              as a Multi-Tasking Staff (MTS) in the Archaeology Department of
+              India. I hold a B.Sc. in Mathematics from a college in Jaipur,
+              where I moved after completing my 10th in my village and 12th in
+              Sawai Madhopur. Coming from a middle-class family with my father
+              as a farmer, I prepared for government jobs in Jaipur. I am
+              dedicated to my role in the Archaeology Department, balancing my
+              professional life with my love for traveling, watching movies, and
+              spending time with friends.
+            </p>
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('Skills')">
+                Skills
+              </p>
+              <p class="tab-links" onclick="opentab('Experience')">
+                Experience
+              </p>
+              <p class="tab-links" onclick="opentab('Education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="Skills">
+              <ul>
+                <li>
+                  <span>SSC MTS</span><br />Working in Archeology department of
+                  india
+                </li>
+                <li>
+                  <span>Web Doveloper</span><br />Trying to learn web
+                  dovelopment
+                </li>
+                <li>
+                  <span>Director</span><br />Directed "MOHABBAT KYA HAI" in 2025
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="Experience">
+              <ul>
+                <li>
+                  <span>2021-current</span><br />studied in different libraries
+                  of india
+                </li>
+                <li><span>2025</span><br /></li>
+                <li><span>2024-2025</span><br />Farming</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="Education">
+              <ul>
+                <li><span>2023</span><br />B.SC from subodh college</li>
+                <li><span>2020</span><br />12th form mds</li>
+                <li><span>2021</span><br />RS-CIT</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!------------contact----------->
+    <div class="contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="sub-title">Contact Me</h1>
+            <p>
+              <i class="fa-solid fa-paper-plane"></i>
+              ankitmeena1082002@gmail.com
+            </p>
+            <p><i class="fa-solid fa-phone"></i> 9001912977</p>
+            <div class="social-icon">
+              <a
+                href="https://www.facebook.com/profile.php?id=100070934724551"
+                target="_blank"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+              <a href="https://x.com/ankitaji007" target="_blank"
+                ><i class="fa-brands fa-square-x-twitter"></i
+              ></a>
+              <a href="https://www.instagram.com/ankit_.taji06/" target="_blank"
+                ><i class="fa-brands fa-square-instagram"></i
+              ></a>
+            </div>
+            <a href="image/spaced.jpg" download class="btn">Download</a>
+          </div>
+          <div class="contact-right">
+            <form name="submit-to-google-sheet">
+              <input type="text" name="Name" placeholder="Your Name" required />
+              <input
+                type="email"
+                name="Email"
+                placeholder="Your Email"
+                required
+              />
+              <textarea
+                name="Message"
+                rows="6"
+                placeholder="Your Message"
+                required
+              ></textarea>
+              <button type="submit" class="btn">Submit</button>
+            </form>
+            <span id="msg"></span>
+          </div>
+        </div>
+      </div>
+      <div class="copyright"><p>copyright &copy; Ankit.</p></div>
+    </div>
+
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+    <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbx7Xm_CseUAdC3FFOAG0IMG2N3iQJunVG0thTqUmCu_EZziPtdxlbCNwbG5_aq7XaE58Q/exec";
+      const form = document.forms["submit-to-google-sheet"];
+      const msg = document.getElementById("msg");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            msg.innerHTML = "Message sent successfully";
+            setTimeout(function () {
+              msg.innerHTML = "";
+            }, 5000);
+            form.reset();
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
+  </body>
+</html>
