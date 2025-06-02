@@ -17,6 +17,7 @@ body {
   background-image: url(image/ak.png);
   background-position: right;
   background-size: 90%;
+  background-repeat: no-repeat;
 }
 
 .container {
